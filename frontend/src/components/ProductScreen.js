@@ -1,18 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Row,
-  Column,
-  Image,
-  ListGroup,
-  Card,
-  Button,
-  Col,
-  ListGroupItem,
-} from 'react-bootstrap';
+import { Row, Image, ListGroup, Card, Button, Col } from 'react-bootstrap';
 import Rating from '../components/Rating';
 import axios from 'axios';
 
+// { match } is coming from React Router
 const ProductScreen = ({ match }) => {
   const [product, setProduct] = useState({});
 

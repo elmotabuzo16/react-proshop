@@ -9,9 +9,10 @@ import Message from '../components/Message';
 const HomeScreen = () => {
   const dispatch = useDispatch();
 
+  // state.productList is coming from store.js
   const productList = useSelector((state) => state.productList);
 
-  // destructuring from reducer
+  // destructuring from state reducer
   const { loading, error, products } = productList;
 
   useEffect(() => {

@@ -10,10 +10,12 @@ import {
 
 export const listProducts = () => async (dispatch) => {
   try {
+    // loading state = false
     dispatch({ type: PRODUCT_LIST_REQUEST });
 
     const { data } = await axios.get('/api/products');
 
+    // loading state = true
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
       payload: data,
@@ -31,10 +33,12 @@ export const listProducts = () => async (dispatch) => {
 
 export const listProductDetails = (id) => async (dispatch) => {
   try {
+    // loading state = false
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
 
     const { data } = await axios.get(`/api/products/${id}`);
 
+    // loading state = true
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
       payload: data,
